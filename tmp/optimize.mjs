@@ -1,0 +1,7 @@
+import sharp from 'file:///C:/Users/Felipe/AppData/Local/OpenAI/Codex/runtimes/cua_node/78fb63cda1a9e2b2/bin/node_modules/sharp/dist/index.mjs';
+for(let i=0;i<5;i++) await sharp(`site/dist/assets/cover-${i}.png`).resize({width:800}).webp({quality:87}).toFile(`site/dist/assets/cover-${i}.webp`);
+await sharp('site/dist/assets/cover-0.png').extract({left:0,top:69,width:952,height:358}).webp({quality:88}).toFile('site/dist/assets/ai.webp');
+await sharp('site/dist/assets/training.jpg').resize({width:1400}).grayscale().webp({quality:85}).toFile('site/dist/assets/training.webp');
+await sharp('site/dist/assets/gym.jpg').resize({width:1000}).grayscale().webp({quality:80}).toFile('site/dist/assets/gym.webp');
+const og=`<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630"><rect width="1200" height="630" fill="#171915"/><rect y="605" width="1200" height="25" fill="#ff791c"/><text x="65" y="95" fill="#ff791c" font-family="Arial" font-size="45" font-weight="bold">Tá Pago! FITNESS</text><text x="65" y="235" fill="#f4f2eb" font-family="Arial" font-size="70" font-weight="bold">SEU PRÓXIMO</text><text x="65" y="330" fill="#ff791c" font-family="Arial" font-size="85" font-weight="bold">TÁ PAGO!</text><text x="65" y="420" fill="#f4f2eb" font-family="Arial" font-size="70" font-weight="bold">COMEÇA AQUI.</text><text x="65" y="535" fill="#bbbfb0" font-family="Arial" font-size="27">Dieta com IA · Receitas Fit · Mais possibilidades</text></svg>`;
+await sharp(Buffer.from(og)).jpeg({quality:90}).toFile('site/dist/assets/og.jpg');
