@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tapagofitness.com.br/sitemap.xml

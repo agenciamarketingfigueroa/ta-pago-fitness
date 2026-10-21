@@ -1,0 +1,42 @@
+export const products = [
+  {
+    slug: 'dieta-com-ia', name: 'Dieta com Inteligência Artificial', short: 'Dieta com IA', category: 'ia', label: 'SEU PRIMEIRO PASSO', cover: 0, price: '29,90', installments: '9x de R$3,93', total: '35,37', pages: 24,
+    checkout: 'https://pay.hotmart.com/G81186656A?off=62vsidox&checkoutMode=10',
+    headline: 'MAIS CLAREZA.<br>MENOS COMPLICAÇÃO.<br><em>IA NA SUA ROTINA.</em>',
+    description: 'Um guia para aprender a conversar com a IA sobre alimentação, organizar suas ideias e levar mais praticidade para a rotina.',
+    card: 'Aprenda o passo a passo, adapte alimentos e organize sua lista de compras com a ajuda da IA.',
+    examples: ['Como organizar suas informações antes de começar', 'Exemplos de perguntas para usar no ChatGPT', 'Como pedir substituições de alimentos', 'Como transformar as ideias em uma lista de compras'],
+  },
+  {
+    slug: 'receitas-fit', name: 'Top 10 Receitas Fit', short: 'Receitas Fit', category: 'receitas', label: 'PARA O DIA A DIA', cover: 2, price: '9,90', installments: '3x de R$3,53', total: '10,59', pages: 14,
+    checkout: 'https://pay.hotmart.com/D81181867Q?checkoutMode=10',
+    headline: 'SAIA DO ÓBVIO.<br><em>CAPRICHE NO PRATO.</em>',
+    description: 'Ideias de refeições para variar o almoço e o jantar. Ingredientes, modo de preparo e inspiração para sair do “o que eu faço hoje?”.',
+    card: 'Do frango grelhado à salada de quinoa. Novas ideias para as suas refeições.',
+    examples: ['Frango grelhado com arroz integral e legumes assados', 'Salmão grelhado com salada de quinoa e abacate', 'Frango recheado com ricota e espinafre'],
+  },
+  {
+    slug: 'sobremesas-fit', name: 'Top 10 Sobremesas Fit', short: 'Sobremesas Fit', category: 'receitas', label: 'SEU MOMENTO DOCE', cover: 3, price: '9,90', installments: '3x de R$3,53', total: '10,59', pages: 14,
+    checkout: 'https://pay.hotmart.com/V81182075I?checkoutMode=10',
+    headline: 'TEM ESPAÇO<br><em>PARA O DOCE.</em>',
+    description: 'Mousse, brownie, sorvete e outras ideias para colocar a mão na massa e dar um toque doce à sua rotina.',
+    card: 'Chocolate, frutas e novas combinações. Descubra seu próximo doce favorito.',
+    examples: ['Mousse de chocolate com abacate e cacau', 'Sorvete de banana com pasta de amendoim', 'Brownie com farinha de amêndoas'],
+  },
+  {
+    slug: 'receitas-airfryer', name: 'Receitas Fit de Airfryer', short: 'Fit na Airfryer', category: 'receitas', label: 'LIGOU, PREPAROU', cover: 1, price: '9,90', installments: '3x de R$3,53', total: '10,59', pages: 13,
+    checkout: 'https://pay.hotmart.com/N81182327L?checkoutMode=10',
+    headline: 'SUA AIRFRYER.<br><em>NOVAS POSSIBILIDADES.</em>',
+    description: 'Uma seleção de receitas para aproveitar a airfryer: do acompanhamento ao prato principal, com ingredientes e instruções de preparo.',
+    card: 'Frango crocante, chips e muito mais para aproveitar a sua airfryer.',
+    examples: ['Frango empanado com flocos de milho', 'Chips de batata-doce', 'Salmão com crosta de gergelim'],
+  },
+  {
+    slug: 'top-30-receitas-fit', name: 'Top 30 Receitas Fit', short: 'Combo Top 30', category: 'combo', label: '3 COLEÇÕES EM 1 EBOOK', cover: 4, price: '14,90', installments: '4x de R$4,06', total: '16,24', pages: 39,
+    checkout: 'https://pay.hotmart.com/O81182488K?checkoutMode=10',
+    headline: 'DO PRATO PRINCIPAL<br>À SOBREMESA.<br><em>TUDO JUNTO.</em>',
+    description: 'Os conteúdos de Receitas Fit, Sobremesas Fit e Receitas Fit de Airfryer reunidos em um único ebook. Mais variedade na cozinha, em uma só escolha.',
+    card: 'O combo reúne os três ebooks de receitas em um único arquivo. Escolha a coleção completa.',
+    examples: ['Receitas Fit: ideias para almoço e jantar', 'Sobremesas Fit: mousses, sorvetes e outras delícias', 'Receitas de Airfryer: pratos e acompanhamentos'],
+  },
+];
