@@ -18,7 +18,7 @@ Prévia: http://127.0.0.1:4173. Arquivos para hospedagem: `dist/`.
 - `build.mjs`: gera a página institucional, catálogo e cinco páginas de produto.
 - `pixel.mjs`: Meta Pixel 2284410015213545. Um PageView por carregamento de página, sem eventos adicionais. Script no head e fallback noscript no body.
 - `dist/styles.css`, `dist/app.js`: estilos e interações.
-- `.openai/hosting.json`: identidade do Site e diretório estático.
+- `.github/workflows/pages.yml` (na raiz do repositório): gera, verifica e publica `site/dist/` no GitHub Pages a cada envio para `main`.
 
 As páginas usam os preços informados pelo proprietário. O checkout da Hotmart é externo; alterar o preço no site não altera a oferta na Hotmart.
 
@@ -38,4 +38,6 @@ Há inconsistências nos PDFs de receitas: um título de sopa acompanha ingredie
 
 ## Publicação
 
-Site criado inicialmente com acesso privado para revisão do proprietário. A publicação no Sites preserva esse acesso. O domínio e os metadados estão definidos em `build.mjs` e podem ser atualizados ao migrar a hospedagem.
+O site público usa `https://tapagofitness.com.br`. O código fica em `site/`, e o workflow do GitHub Pages executa `npm run build` e `npm run check` antes de publicar `site/dist/`. Para atualizar o site, altere os arquivos em `site/`, faça commit e envie para a branch `main`.
+
+O DNS do domínio está no Cloudflare, com os registros A do GitHub Pages e o CNAME `www` apontando para `agenciamarketingfigueroa.github.io`. O Registro.br delega o domínio aos nameservers do Cloudflare. Alterações de DNS podem levar algum tempo para se propagar.
