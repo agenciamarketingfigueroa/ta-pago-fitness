@@ -9,3 +9,7 @@
 .book-scene{overflow:clip}.collection .section-heading h1{font-size:clamp(40px,4.15vw,62px);margin-bottom:0}@media(max-width:800px){.faq-section h2 br{display:block}.collection .section-heading h1{font-size:46px}}@media(max-width:580px){.collection .section-heading h1{font-size:43px}}
 
 .logo svg{transform:none;fill:currentColor;width:35px;height:45px}.logo{gap:14px}@media(max-width:800px){.logo svg{width:30px;height:39px}}
+
+/* Dieta com IA: offer and benefits */
+.ai-product .hero-benefits{margin:22px 0 0}.ai-product .hero-benefits li{font-size:12px;line-height:1.6}.ai-product .offer-label{display:block;margin-bottom:12px;font-size:9px}.ai-product .purchase-block{margin-top:25px}.ai-product .hero-disclaimer{max-width:450px;margin:15px 0;color:#c3c6bc;font-size:11px;line-height:1.6}.ai-product .offer-benefits{margin:22px 0 0}.ai-product .offer-benefits li{font-size:12px}.ai-product .final-offer .check-list li:before{color:var(--ink)}.ai-product .product-pitch h1{font-size:clamp(42px,4.2vw,65px)}.ai-product .final-offer h2 em{color:var(--ink)}
+@media(max-width:580px){.ai-product .product-pitch h1{font-size:clamp(36px,10.2vw,58px)}.ai-product .purchase-block .button,.ai-product .final-offer .button{width:100%;justify-content:space-between;gap:12px}.ai-product .product-description{font-size:14px}.ai-product .hero-benefits li{font-size:12px}.ai-product .final-offer h2{font-size:44px}}

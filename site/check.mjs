@@ -1,11 +1,13 @@
 import fs from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import {products} from './products.mjs';
+import './attribution.test.mjs';
 const pages=['index.html','produtos/index.html','404.html',...products.map(p=>`${p.slug}/index.html`)];
 let links=0;
 for(const file of pages){
  const html=await fs.readFile('dist/'+file,'utf8');
  assert.equal((html.match(/<h1[ >]/g)||[]).length,1,`${file}: exactly one main heading`);
+ assert.equal((html.match(/type="module" src="\/attribution\.js"/g)||[]).length,1,`${file}: campaign forwarding enabled`);
  assert.equal((html.match(/fbq\('init', '2284410015213545'\)/g)||[]).length,1,`${file}: one pixel init`);
  assert.equal((html.match(/fbq\('track', 'PageView'\)/g)||[]).length,1,`${file}: one PageView`);
  assert(html.indexOf("fbq('init'")<html.indexOf('</head>'),`${file}: pixel inside head`);

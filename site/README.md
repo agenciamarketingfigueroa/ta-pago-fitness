@@ -41,3 +41,15 @@ Há inconsistências nos PDFs de receitas: um título de sopa acompanha ingredie
 O site público usa `https://tapagofitness.com.br`. O código fica em `site/`, e o workflow do GitHub Pages executa `npm run build` e `npm run check` antes de publicar `site/dist/`. Para atualizar o site, altere os arquivos em `site/`, faça commit e envie para a branch `main`.
 
 O DNS do domínio está no Cloudflare, com os registros A do GitHub Pages e o CNAME `www` apontando para `agenciamarketingfigueroa.github.io`. O Registro.br delega o domínio aos nameservers do Cloudflare. Alterações de DNS podem levar algum tempo para se propagar.
+
+## Rastreamento dos anúncios
+
+No anúncio da Meta, use `https://tapagofitness.com.br/dieta-com-ia/` como URL do site e cole no campo **Parâmetros de URL**, sem `?` inicial:
+
+```text
+utm_source={{site_source_name}}&utm_medium=paid_social&utm_campaign={{campaign.id}}&utm_term={{adset.id}}&utm_content={{ad.id}}&sck=meta_{{campaign.id}}_{{adset.id}}_{{ad.id}}
+```
+
+Os IDs identificam campanha, conjunto e anúncio mesmo se seus nomes mudarem. A Meta preenche os campos dinâmicos no clique do anúncio. `dist/attribution.js` repassa UTM e SCK aos links internos e aos botões do checkout HTTPS em pay.hotmart.com, preservando `off`, `checkoutMode` e valores de atribuição já definidos no destino. Não persiste dados em cookies ou armazenamento local. A atribuição acompanha esta navegação; acessos posteriores sem parâmetros não recuperam uma campanha anterior. Campos estranhos à lista permitida não são repassados.
+
+Validação: `npm run check` também executa `attribution.test.mjs`. No navegador, abra a página com valores de teste e confira o endereço dos dois botões de compra. Isso valida o repasse dos parâmetros, não uma conversão nem a configuração do evento Purchase na Hotmart.

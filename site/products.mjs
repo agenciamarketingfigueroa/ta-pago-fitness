@@ -1,9 +1,9 @@
 export const products = [
   {
-    slug: 'dieta-com-ia', name: 'Dieta com Inteligência Artificial', short: 'Dieta com IA', category: 'ia', label: 'SEU PRIMEIRO PASSO', cover: 0, price: '29,90', installments: '9x de R$3,93', total: '35,37', pages: 24,
+    slug: 'dieta-com-ia', name: 'Dieta com Inteligência Artificial', short: 'Dieta com IA', category: 'ia', label: 'APRENDA A USAR O CHATGPT', cover: 0, price: '29,90', installments: '9x de R$3,93', total: '35,37', pages: 24,
     checkout: 'https://pay.hotmart.com/G81186656A?off=62vsidox&checkoutMode=10',
-    headline: 'MAIS CLAREZA.<br>MENOS COMPLICAÇÃO.<br><em>IA NA SUA ROTINA.</em>',
-    description: 'Um guia para aprender a conversar com a IA sobre alimentação, organizar suas ideias e levar mais praticidade para a rotina.',
+    headline: 'PARE DE IMPROVISAR.<br>PLANEJE SUA<br><em>ALIMENTAÇÃO COM IA.</em>',
+    description: 'Aprenda o que perguntar ao ChatGPT para organizar refeições, pedir trocas de alimentos e criar sua lista de compras — considerando sua rotina e seus gostos.',
     card: 'Aprenda o passo a passo, adapte alimentos e organize sua lista de compras com a ajuda da IA.',
     examples: ['Como organizar suas informações antes de começar', 'Exemplos de perguntas para usar no ChatGPT', 'Como pedir substituições de alimentos', 'Como transformar as ideias em uma lista de compras'],
   },
