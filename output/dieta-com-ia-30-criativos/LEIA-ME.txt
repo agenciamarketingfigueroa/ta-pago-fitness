@@ -1,0 +1,29 @@
+DIETA COM IA — 30 CRIATIVOS
+Tá Pago! Fitness
+
+ENTREGA
+30 PNGs quadrados originais gerados individualmente com a ferramenta nativa de imagens.
+Abra catalogo.html no navegador para comparar as peças e baixar os arquivos.
+textos-dos-anuncios.md: textos principais sugeridos para as 30 peças.
+prompts.json: conjunto exato dos prompts utilizados.
+verificacao.json: dimensões e tamanho dos arquivos conferidos.
+
+USO
+As imagens são arquivos finais achatados, sem camadas editáveis.
+Use o CTA Saiba mais no gerenciador, direcionando à página do ebook:
+https://tapagofitness.com.br/dieta-com-ia/
+Confira a prévia por posicionamento. O quadrado não preenche uma tela vertical inteira.
+Não foi criada nem publicada campanha, nem alterado o site.
+
+DIREÇÃO DA CAMPANHA
+Paleta preto, creme e laranja; títulos grandes; comida e organização em destaque.
+Copy baseada nas funções identificadas no produto: perguntas à IA, preferências, substituições e lista de compras.
+Sem preço nas artes, sem escassez fictícia, depoimentos fabricados ou garantias de emagrecimento.
+As imagens são ilustrativas; não representam receitas específicas incluídas no ebook.
+
+LIMITES DA REVISÃO
+O guia enviado foi lido integralmente e usado como referência interpretativa. Ele próprio informa que não é uma publicação oficial da Meta.
+As páginas oficiais consultadas tiveram restrições de acesso automatizado. Não se certifica conformidade integral ou aprovação.
+O endereço público fornecido também não pôde ser carregado pelo leitor web; a descrição do produto e os exemplos foram conferidos nos arquivos locais do projeto e no texto extraído do ebook.
+O texto original do ebook contém alegações quantitativas de perda de peso e orientações nutricionais que não foram reproduzidas nestes anúncios. O conteúdo entregue, a página e o checkout merecem revisão profissional própria; uma arte adequada não garante a aprovação do conjunto.
+Aprovação, cliques e vendas não são garantidos.
