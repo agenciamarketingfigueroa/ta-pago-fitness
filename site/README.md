@@ -14,13 +14,18 @@ npm start
 
 Prévia: http://127.0.0.1:4173. Arquivos para hospedagem: `dist/`.
 
+No VS Code, o Go Live usa `site/dist` como raiz (configurado em `.vscode/settings.json`). Abra `site/dist/quiz-dieta-com-ia/index.html` e use **Open with Live Server** para revisar o quiz em `http://127.0.0.1:5500/quiz-dieta-com-ia/`. Se o Live Server já estiver rodando com a raiz anterior, pare e inicie novamente. A página inicial continua disponível em `http://127.0.0.1:5500/`.
+
 - `products.mjs`: catálogo, preços, parcelas, descrições e links da Hotmart.
 - `build.mjs`: gera a página institucional, catálogo e cinco páginas de produto.
-- `pixel.mjs`: Meta Pixel 2284410015213545. Um PageView por carregamento de página, sem eventos adicionais. Script no head e fallback noscript no body.
+- `pixel.mjs`: Meta Pixel 2284410015213545. Um PageView por carregamento de página. Script no head e fallback noscript no body.
+- `quiz.mjs`, `dist/quiz.css`, `dist/quiz.js`: quiz de quatro perguntas para o ebook Dieta com IA, na rota `/quiz-dieta-com-ia/`. Usa o mesmo Pixel (PageView) e registra `QuizStarted`, `QuizCompleted` e `InitiateCheckout`, sem enviar as respostas. A rota de prévia tem `noindex` e não aparece no sitemap. Remover `noindex` apenas quando a campanha for aprovada.
 - `dist/styles.css`, `dist/app.js`: estilos e interações.
 - `.github/workflows/pages.yml` (na raiz do repositório): gera, verifica e publica `site/dist/` no GitHub Pages a cada envio para `main`.
 
 As páginas usam os preços informados pelo proprietário. O checkout da Hotmart é externo; alterar o preço no site não altera a oferta na Hotmart.
+
+O quiz usa R$67 como orçamento hipotético na oferta final, sem apresentá-lo como preço anterior. O preço de venda continua R$19,90 à vista. O quiz compartilha logo, fontes e estilos do site. As fontes são WOFF2 locais com `font-display: swap`; não há fotografias ou capas para baixar no quiz. A interface de todas as páginas usa preto `#000000`, branco `#ffffff` e laranja `#ff791c`; os arquivos originais das capas são preservados.
 
 ## Conteúdo e identidade
 
@@ -28,7 +33,7 @@ As capas foram renderizadas a partir dos PDFs fornecidos. O símbolo original da
 
 Os PDFs integrais não são publicados na pasta pública; somente suas capas. Os clientes seguem para a Hotmart para comprar.
 
-O Top 30 é um bundle dos três materiais de receitas: R$14,90 à vista ou 4x de R$4,06 (total R$16,24). Individuais: R$9,90 ou 3x de R$3,53. Dieta com IA: R$29,90 ou 9x de R$3,93.
+O Top 30 é um bundle dos três materiais de receitas: R$14,90 à vista ou 4x de R$4,06 (total R$16,24). Individuais: R$9,90 ou 3x de R$3,53. Dieta com IA: R$19,90.
 
 ## Observações editoriais dos materiais originais
 
@@ -53,3 +58,7 @@ utm_source={{site_source_name}}&utm_medium=paid_social&utm_campaign={{campaign.i
 Os IDs identificam campanha, conjunto e anúncio mesmo se seus nomes mudarem. A Meta preenche os campos dinâmicos no clique do anúncio. `dist/attribution.js` repassa UTM e SCK aos links internos e aos botões do checkout HTTPS em pay.hotmart.com, preservando `off`, `checkoutMode` e valores de atribuição já definidos no destino. Não persiste dados em cookies ou armazenamento local. A atribuição acompanha esta navegação; acessos posteriores sem parâmetros não recuperam uma campanha anterior. Campos estranhos à lista permitida não são repassados.
 
 Validação: `npm run check` também executa `attribution.test.mjs`. No navegador, abra a página com valores de teste e confira o endereço dos dois botões de compra. Isso valida o repasse dos parâmetros, não uma conversão nem a configuração do evento Purchase na Hotmart.
+
+## Quiz e rotas para revisao
+
+O quiz tem 10 perguntas e ocupa `/dieta-com-ia/`. A pagina de vendas anterior foi preservada em `/dieta-com-ia-v2/`. `/quiz-dieta-com-ia/` continua como alias de preview. O quiz permanece noindex durante a revisao. Antes de publicar, alinhar a oferta Hotmart: o checkout foi conferido e ainda cobrava R$29,90 em 23/10/2026. O site exibe o novo valor solicitado de R$19,90 sem parcelas nao verificadas.
